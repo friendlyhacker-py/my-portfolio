@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&amp;display=swap');
+:root {
+    --yellow: rgb(202, 0, 0);
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+#active {
+    color: var(--yellow);
+}
+
+html {
+    font-size: 62.5;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+html::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: var(--yellow);
+}
+
+body {
+    background: #fff;
+}
+
+header {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .navbar {
+    background-color: transparent;
+    padding: 1.5rem;
+}
+
+header .navbar a {
+    background-color: transparent;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+header .navbar a:hover {
+    background-color: transparent;
+    color: var(--yellow);
+}
+
+#menu-bars {
+    position: fixed;
+    z-index: 10000;
+    top: 1rem;
+    left: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+    color: #fff;
+    background: var(--yellow);
+    cursor: pointer;
+    font-size: 3rem;
+    display: none;
+}
+
+section {
+    padding: 2rem 9%;
+    min-height: 100vh;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    background: #222;
+    color: #fff;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--yellow);
+    letter-spacing: .2rem;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.home #particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.home ::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.home .content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.home .content img {
+    height: 25rem;
+    width: 20rem;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1rem solid var(--yellow);
+}
+
+.home .content h3 {
+    font-size: 4rem;
+    color: rgb(77, 211, 77);
+    text-transform: uppercase;
+}
+
+.home .content h3 span {
+    color: var(--yellow);
+    text-transform: uppercase;
+}
+
+.home .content p {
+    color: rgb(77, 211, 77);
+    font-size: 2.5rem;
+    line-height: 2;
+}
+
+
+/*1.5 1.2 1.2 1*/
+
+.about {
+    padding: 2rem 9%;
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    color: rgb(77, 211, 77);
+    text-transform: uppercase;
+}
+
+.heading span {
+    color: var(--yellow);
+    text-transform: uppercase;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 4rem;
+}
+
+.row .image {
+    align-self: flex-start;
+    text-align: center;
+    flex: 1 1 25rem;
+}
+
+.row .image img {
+    height: 20rem;
+    width: 15rem;
+    border-radius: .5rem;
+    border: .9rem solid #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+.row .content {
+    flex: 1 1 55rem;
+    padding-right: 3rem;
+}
+
+.row .content h3 {
+    color: rgb(77, 211, 77);
+    font-size: 2rem;
+}
+
+.row .content h3 span {
+    color: var(--yellow);
+}
+
+.row .content .info {
+    color: rgb(77, 211, 77);
+    font-size: 1rem;
+    text-align: justify;
+    padding: 1rem 0;
+    line-height: 2rem;
+}
+
+.row .content .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.row .content .box-container .box {
+    flex: 1 1 15rem;
+}
+
+.row .content .box-container .box p {
+    font-size: 1rem;
+    color: rgb(77, 211, 77);
+    padding: .3rem 0;
+    line-height: 2;
+}
+
+.row .content .box-container .box p span {
+    color: var(--yellow);
+}
+
+.service {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
+}
+
+.service .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.service .box-container .box {
+    flex: 1 1 40rem;
+    border-radius: .5rem;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 1rem;
+    text-align: center;
+}
+
+.service .box-container .box p {
+    color: rgb(77, 211, 77);
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    line-height: 2rem;
+}
+
+.font-awersome {
+    font-size: 25px;
+    color: var(--yellow);
+}
+
+.heading-left {
+    font-size: 1.5rem;
+    text-align: start;
+}
+
+.heading-left span {
+    color: var(--yellow);
+}
+
+.skill-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill-box .skill-container {
+    flex: 1 1 20rem;
+}
+
+.bar {
+    margin: 10px 0;
+}
+
+.bar:first-child {
+    margin-top: 0px;
+}
+
+.bar .info {
+    margin-bottom: 5px;
+}
+
+.bar .info span {
+    font-weight: 500;
+    color: rgb(77, 211, 77);
+    font-size: 1rem;
+    opacity: 0;
+    animation: showText 0.2s 1s linear forwards;
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+.bar .progress-line {
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 10px;
+    animation: animate 0.5s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.bar .progress-line span {
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: var(--yellow);
+    animation: animate 0.5s 0.5s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line.c span {
+    width: 75%;
+}
+
+.bar .progress-line.python span {
+    width: 80%;
+}
+
+.bar .progress-line.css span {
+    width: 70%;
+}
+
+.bar .progress-line.linux span {
+    width: 85%;
+}
+
+.bar .progress-line.iot span {
+    width: 75%;
+}
+
+.bar .progress-line.oracle span {
+    width: 70%;
+}
+
+.progress-line span::after {
+    position: absolute;
+    top: -28px;
+    right: 0;
+    font-weight: 500;
+    background: #f0f0f0;
+    color: #111;
+    padding: 1px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText2 {
+    100% {
+        opacity: 1;
+    }
+}
+
+.progress-line.c span::after {
+    content: "75%";
+}
+
+.progress-line.python span::after {
+    content: "80%";
+}
+
+.progress-line.css span::after {
+    content: "70%";
+}
+
+.progress-line.linux span::after {
+    content: "85%";
+}
+
+.progress-line.iot span::after {
+    content: "75%";
+}
+
+.progress-line.oracle span::after {
+    content: "70%";
+}
+
+.contact .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact .row .image {
+    flex: 1 1 20rem;
+}
+
+.contact .row .image img {
+    width: 100%;
+    border-radius: .5rem;
+    border: .9rem solid #fff;
+    box-shadow: none;
+}
+
+.contact .row form {
+    flex: 1 1 20rem;
+    padding: 1rem 2rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    background: #fff;
+}
+
+.contact .row form .inputbox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact .row form .inputbox input,
+.contact .row form .box,
+.contact .row form textarea {
+    width: 100%;
+    border-radius: .5rem;
+    font-size: 1rem;
+    color: rgb(77, 211, 77);
+    padding: 1rem;
+    margin: 1rem 0;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    text-transform: none;
+}
+
+.contact .row form .inputbox input:focus,
+.contact .row form .box:focus,
+.contact .row form textarea:focus {
+    border-color: var(--yellow);
+}
+
+.contact .row form .inputbox input {
+    width: 49%;
+}
+
+.contact .row form textarea {
+    height: 10rem;
+    resize: none;
+}
+
+.contact .row form .btn {
+    margin: .5rem 0;
+    font-size: 1rem;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    justify-self: center;
+    width: 100%;
+    padding: 2.5rem;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+}
+
+.footer span {
+    color: var(--yellow);
+}
+
+.social {
+    position: fixed;
+    bottom: 0;
+    justify-self: center;
+    width: 100%;
+    text-align: center;
+    background: white;
+}
+
+.social a {
+    min-height: none;
+    min-width: none;
+}
+
+.social a i {
+    color: var(--yellow);
+    font-size: 2.5rem;
+    margin: 1rem;
+}
+
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+    body {
+        padding-right: 0;
+    }
+    section {
+        padding: 2rem;
+    }
+    header {
+        width: 100%;
+        left: -120%;
+    }
+    header.active {
+        left: 0%;
+    }
+    #menu-bars {
+        display: initial;
+    }
+    header .navbar {
+        min-height: 100vh;
+        min-width: 100%;
+        display: flex;
+        background-color: #fff;
+        flex-direction: column;
+        justify-content: center;
+    }
+    header .navbar a {
+        text-align: center;
+        padding: 2rem;
+        font-size: 3rem;
+    }
+    .bar .progress-line {
+        height: 5px;
+    }
+    .progress-line span::after {
+        font-size: 6px;
+    }
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+    .heading {
+        font-size: 4rem;
+    }
+    .contact .row form .inputBox input {
+        width: 100%;
+    }
+}
